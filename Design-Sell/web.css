@@ -1,0 +1,33 @@
+.body{
+  background-color: cornsilk;
+  padding: 50px;
+
+}
+.paragragh1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: inherit;
+    font-weight: lighter;
+    font-style: inherit;
+    text-align: center;
+    color:rgb(118, 141, 184);
+    opacity: initial;
+
+}
+.paragragh2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: inherit;
+    font-weight: 100;
+    font-style: italic;
+    text-align: center;
+    color: black;
+
+}
+.paragragh3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: unset;
+    font-weight: bold;
+    font-style: oblique;
+    text-align: center;
+    color: rgb(35, 35, 80);
+
+}
