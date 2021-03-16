@@ -58,8 +58,8 @@ function insertNewRecord(data) {
     var table = document.getElementById("finance_table")
     var body = table.getElementsByTagName("tbody");
 
-    for (let index = 0; index < body.length; index++) {
-        const element = body[index];
+    for (let index = 0; index < data.length; index++) {
+        const element = body[0];
         var newRow = element.insertRow(0);
         if (data[index]) {
             var cell1 = newRow.insertCell(0);          // cell created 
