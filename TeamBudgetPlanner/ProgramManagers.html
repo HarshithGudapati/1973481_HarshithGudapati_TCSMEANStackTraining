@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css"/>
+    <!-- <script src="ProgramManagers.js"></script> -->
+    <script src="FinanceTeams.js"></script>
+    <style>
+        fieldset {
+            background-color: #eeeeee;
+        }
+        legend {
+            background-color: gray;
+            color: white;
+            padding: 5px 5px;
+            box-sizing: content-box;
+        }
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Program Managers</h1>
+    <form action="/action_page.php">
+        <div class="card" style="text-align: center;vertical-align: middle;margin-left: 400px; margin-top: 102px;padding-top: 20px;">
+            <label for="cname">Client Name:</label>
+            <input type="text" id="cname" name="Client_Name"><br><br>
+            <label for="pname">Project Name:</label>
+            <input type="text" id="pname" name="Project_Name"><br><br>
+            <label for="budget">Budget:</label>
+            <input type="text" id="budget" name="Budget_Name" style="margin-left: 8px;"><br><br>
+            <div style="padding: 20px;">
+                <input type="button" value="Add" onclick="onFormSubmit()"/>
+                <input type="button" value="Clear" onclick="resetData()"/>
+            <br><br>
+            <a href="./mainPage.html">back</a>
+        </div>
+           
+        </div>
+    </form>
+</body>
+</html>
