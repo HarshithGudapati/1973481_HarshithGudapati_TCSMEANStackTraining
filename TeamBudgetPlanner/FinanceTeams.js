@@ -4,10 +4,10 @@ function storeInSession() {
     sessionStorage.setItem("progInfo", JSON.stringify(progObj));
 }
 function onFormSubmit() {
-    //alert("Event generated...")
+    
     var data = readFormData();
-    //insertNewRecord(data);
-    progObj.push(data);      //in empObj
+    
+    progObj.push(data);      
     storeInSession();
 }
 function resetData() {
@@ -16,14 +16,14 @@ function resetData() {
     document.getElementById("budget").value = "";
 }
 function readFormData() {
-    var obj = {}    // empty object
+    var obj = {}    
     obj.cname = document.getElementById("cname").value;
     obj.pname = document.getElementById("pname").value;
     obj.budget = document.getElementById("budget").value;
     console.log(obj);
     return obj;
 }
-// kjhgdkajhgfkajhdsg
+
 document.addEventListener("DOMContentLoaded", function (event) {
     retrieveFromSession();
 });
@@ -51,11 +51,11 @@ function insertNewRecord(data) {
         const element = body[0];
         var newRow = element.insertRow(0);
         if (data[index]) {
-            var cell1 = newRow.insertCell(0);          // cell created 
+            var cell1 = newRow.insertCell(0);          
             cell1.innerHTML = data[index].cname;
-            var cell2 = newRow.insertCell(1);          // cell created 
-            cell2.innerHTML = data[index].pname;                 // value placed
-            var cell2 = newRow.insertCell(2);          // cell created 
+            var cell2 = newRow.insertCell(1);          
+            cell2.innerHTML = data[index].pname;       
+            var cell2 = newRow.insertCell(2);          
             cell2.innerHTML = data[index].budget;
         }
     }
