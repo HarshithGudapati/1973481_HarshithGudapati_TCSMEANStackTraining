@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply Blogging</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="/SimplyBlogging.js"></script>
+    <link rel="stylesheet" type="text/css" href="/SimplyBlogging.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <a class="navbar-brand" href="#" style="text-decoration-thickness: 40px;">Simply Blogging</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col align-self-center ">
+                        <div class="card">
+                            <div class="mb-3">
+                                <label for="cname" class="form-label">Title</label>
+                                <input type="text" class="form-control" id="title" name="Title_Name"
+                                    placeholder="Enter Title Here">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cname" class="form-label">Article</label>
+                                <textarea class="form-control" aria-label="With textarea" id="article"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="avatar">Choose a profile picture:</label>
+                                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                            </div>
+                            <div style="padding: 20px;">
+                                <input type="button" margin="10px" value="Add Blog" style="margin-right: 40px;"
+                                    onclick="onFormSubmit()" />
+                                <button onClick="retrieveSession()" type="button" style="margin-left: 70px;">get Session
+                                    data</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="btn">
+            </div>
+            <div class="container">
+                <div class="row" id="details">
+                </div>
+            </div>
+        </div>
+</body>
+</html>
