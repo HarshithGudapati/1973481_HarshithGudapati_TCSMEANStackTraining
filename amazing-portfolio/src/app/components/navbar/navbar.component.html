@@ -1,0 +1,32 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg navbar-expand-lg bg-light " style="width: 100%;">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#" routerLink="/home">Amazing-Portfolio</a>
+        <button class="navbar-toggler" 
+        (click)= toggleNavBar()
+        type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse"[class.show]="isOpen" id="navbarNav">
+          <ul class="navbar-nav  ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/home" routerLinkActive="Active" style="margin-left: 50px;">
+                  Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/login" routerLinkActive="Active"style="margin-left: 50px;">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/myportfolio" routerLinkActive="Active"style="margin-left: 50px;">MyPortfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/signup" routerLinkActive="Active" style="margin-left: 50px;">SignUp</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-danger" routerLink="/logout" routerLinkActive="Active"(click)= "logout()" style="margin-left: 50px;">Logout</a>
+              </li>
+          </ul>
+        </div>
+    </div>
+      </nav>
+  </nav>

@@ -1,0 +1,37 @@
+<div class="body">
+    <br><br>
+    <h2 class="text-center">My Portfolio</h2><br>
+    <h4>welcome :</h4>
+    <p id="user"></p>
+    <form #userForm="ngForm">
+        
+        <label>Contact Name :</label>
+        <input type="text" name="contactname" class="form-control" placeholder="First name" [(ngModel)]="contactName"><br>
+        <label>Phone No:</label>
+        <input type="text" name="phoneno" [(ngModel)]="contactNumber" class="form-control" placeholder="Phone number">
+        <button type="button" class="btn btn-primary" style="margin: 30px
+        ;" value="addDetails" (click)="addDetails()" >Save</button>
+        </form>
+        <h1 style="text-align: center;">Contact Details</h1><br/>
+        <table class="table">
+            <thead class="table-dark">
+                <th>#</th>
+                <th> Name</th>
+                <th>Phone No</th>
+                
+            </thead>
+            <tbody >
+                <tr *ngFor="let row of progObj;let i = index">
+                    <!-- <td>{{progObj.indexOf(row) + 1}}</td> -->
+                    <td>{{i+1}}</td>
+                    <td>{{row.name}}</td>
+                    <td>{{row.phone}}</td>
+                </tr>
+                <!-- <ol>
+              <li *ngFor="let i of progObj">{{i}}</li>
+            </ol> -->
+            </tbody>
+          </table>
+        
+
+</div>

@@ -1,0 +1,26 @@
+
+    <br><br>
+    <h2 class="text-center">Registration Form </h2><br>
+    <div class="signup-content">
+        <div class="body">
+    <form #signup="ngForm">
+        <label>First Name :</label>
+        <input type="text" class="form-control"  name="firstname" #firstname="ngModel" [ngModel] placeholder="Enter your Firstname here" required><br>
+        <label>Last Name :</label>
+        <input type="text" class="form-control" name="lastname" #lastname="ngModel" [ngModel]   placeholder="Enter your Lastname here" required><br>
+        <label>User Name :</label>
+        <input type="text" class="form-control"  name="username" #username="ngModel" [ngModel]  placeholder="Enter your Username here" required><br>
+        <label>Password :</label>
+        <input type="text" class="form-control" name="password" #password="ngModel" [ngModel]   placeholder="Enter your Password here" required><br>
+        <button type="button" class="btn btn-primary" style="margin: 30px
+        ;" [disabled]="!signup.valid" (click)="dataCapture(signup)">Register</button>
+        <button type="button" class="btn btn-info"style="margin: 30px
+        ;"(click)="signup.resetForm()">Reset</button>
+
+        
+    </form>
+</div>
+</div>
+
+
+
