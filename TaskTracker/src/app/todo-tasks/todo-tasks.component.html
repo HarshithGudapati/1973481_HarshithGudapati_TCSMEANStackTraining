@@ -1,0 +1,62 @@
+<div class="body">
+  <p>
+    <mat-toolbar color="primary">
+      <span>Task Tracker</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      </button>
+    </mat-toolbar>
+  </p>
+  <br><br>
+  <h2 style="text-align: center;">welcome </h2>
+  <div class="content">
+    <br><br><br>
+    <form #empRef="ngForm" (ngSubmit)="storeUser(empRef.value)">
+      <mat-form-field>
+        <mat-label>Id :</mat-label>
+        <input matInput type="text" name="id" ngModel /><br>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>Name :</mat-label>
+        <input matInput type="text" name="name" ngModel />
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>Task:</mat-label>
+        <input matInput type="text area" name="task" ngModel />
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>Dead line:</mat-label>
+        <input matInput type="date" name="deadline" ngModel /><br><br>
+      </mat-form-field>
+      <br>
+      <button mat-stroked-button color="primary" type="submit">Save</button>
+    </form>
+    <br><br>
+  </div>
+  <br><br><br><br>
+  <h2 class="text-center" style="text-align: center;">To do list </h2>
+  <br><br>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="task">
+      <th mat-header-cell *matHeaderCellDef> task </th>
+      <td mat-cell *matCellDef="let element"> {{element.task}} </td>
+    </ng-container>
+    <ng-container matColumnDef="deadline">
+      <th mat-header-cell *matHeaderCellDef> deadline </th>
+      <td mat-cell *matCellDef="let element"> {{element.deadline}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
